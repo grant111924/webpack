@@ -2,7 +2,101 @@ doctype html
 html
     head
         meta(charset="UTF-8")
+        meta(name="viewport" contemt="width=device-width, initial-scale=1, shrink-to-fit=no")
         title webpack 4 practice
     body 
-        h1 hi, index
-        button.btn.btn-primary  button 
+                                                
+        //- #    #   ##   #    # #####    ##   #####  
+        //- ##   #  #  #  #    # #    #  #  #  #    # 
+        //- # #  # #    # #    # #####  #    # #    # 
+        //- #  # # ###### #    # #    # ###### #####  
+        //- #   ## #    #  #  #  #    # #    # #   #  
+        //- #    # #    #   ##   #####  #    # #    # 
+            
+        .bg-info.fixed-top 
+            .container
+                .navbar.navbar-expand-lg.pb-0
+                    .container
+                        .collapse.navbar-collapse#navbarResponsive
+                            ul.navbar-nav.ml-0
+                                li.nav-item.active
+                                    a.nav-link(herf='#') 賣家中心
+                                li.nav-item.active
+                                    a.nav-link(herf='#') 下載
+                                li.nav-item.active
+                                    a.nav-link(herf='#') Services 
+                                li.nav-item.active
+                                    a.nav-link(herf='#') Contact 
+                        .collapse.navbar-collapse#navbarResponsive
+                            ul.navbar-nav.ml-auto
+                                li.nav-item.active
+                                    a.nav-link(herf='#') 通知總覽
+                                li.nav-item.active
+                                    a.nav-link(herf='#') 幫助中心
+                                li.nav-item.active
+                                    a.nav-link(herf='#') 註冊
+                                li.nav-item.active
+                                    a.nav-link(herf='#') 登入 
+                .navbar.navbar-expand-lg.pt-0
+                    .container
+                        a.navbar-brand(href="#") 
+                            h1 Grant Shop
+                        .collapse.navbar-collapse#navbarResponsive
+                            ul.navbar-nav.ml-auto
+                                li.nav-item.active
+                                    a.nav-link(herf='#') Home
+                                        span.sr-only (current)
+                                li.nav-item.active
+                                    a.nav-link(herf='#') About
+                                li.nav-item.active
+                                    a.nav-link(herf='#') Services
+                                li.nav-item.active
+                                    a.nav-link(herf='#') Contact 
+        //- ######   #######  ##    ## ######## ######## ##    ## ######## 
+        //- ##    ## ##     ## ###   ##    ##    ##       ###   ##    ##    
+        //- ##       ##     ## ####  ##    ##    ##       ####  ##    ##    
+        //- ##       ##     ## ## ## ##    ##    ######   ## ## ##    ##    
+        //- ##       ##     ## ##  ####    ##    ##       ##  ####    ##    
+        //- ##    ## ##     ## ##   ###    ##    ##       ##   ###    ##    
+        //- ######   #######  ##    ##    ##    ########  ##    ##    ## 
+        .container
+            .row
+                //- .col-lg-3
+                //-     h1.my-4 Shop Name
+                //-     .list-group
+                //-         a.list-group-item Category 1
+                //-         a.list-group-item Category 2
+                //-         a.list-group-item Category 3
+
+                .col-lg-12
+                    #carouselExampleIndicators(data-ride='carousel').carousel.slide.my-4
+                        ol.carousel-indicators
+                            li.active(data-target="#carouselExampleIndicators" data-slide-to="0")
+                            li(data-target="#carouselExampleIndicators" data-slide-to="1")
+                            li(data-target="#carouselExampleIndicators" data-slide-to="2")
+                        .carousel-inner(role="listbox")
+                            .carousel-item.active
+                                img.d-block.img-fluid(src="http://placehold.it/900x350" alt="First slide")
+                            .carousel-item
+                                img.d-block.img-fluid(src="http://placehold.it/900x350" alt="Second slide")
+                            .carousel-item
+                                img.d-block.img-fluid(src="http://placehold.it/900x350" alt="Third slide")
+                        a.carousel-control-prev(href="#carouselExampleIndicators" role="button" data-slide="prev")
+                            span.carousel-control-prev-icon(aria-hidden="true")
+                            span.sr-only Previous
+                        a.carousel-control-next(href="#carouselExampleIndicators" role="button" data-slide="next")
+                            span.carousel-control-next-icon(aria-hidden="true")
+                            span.sr-only Next
+                    .row
+                        each val, index in ['zero', 'one', 'two']
+                            .col-lg-4.col-md-6.mb-4
+                                .card.h-100
+                                    a(href="#")
+                                        img.card-img-top(src="http://placehold.it/700x400" alt="")
+                                    .card-body
+                                        h4.card-title
+                                            a(href="#")= val
+                                        h5 $24.99
+                                        p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
+                                    .card-footer
+                                        small.text-muted &#9733; &#9733; &#9733; &#9733; &#9734;
