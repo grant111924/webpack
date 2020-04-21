@@ -5,53 +5,39 @@ html
         meta(name="viewport" contemt="width=device-width, initial-scale=1, shrink-to-fit=no")
         title webpack 4 practice
     body 
-                                                
         //- #    #   ##   #    # #####    ##   #####  
         //- ##   #  #  #  #    # #    #  #  #  #    # 
         //- # #  # #    # #    # #####  #    # #    # 
         //- #  # # ###### #    # #    # ###### #####  
         //- #   ## #    #  #  #  #    # #    # #   #  
         //- #    # #    #   ##   #####  #    # #    # 
-            
-        .bg-info.fixed-top 
+        .bg-gradient-info.fixed-top
             .container
-                .navbar.navbar-expand-lg.pb-0
-                    .container
-                        .collapse.navbar-collapse#navbarResponsive
-                            ul.navbar-nav.ml-0
-                                li.nav-item.active
-                                    a.nav-link(herf='#') 賣家中心
-                                li.nav-item.active
-                                    a.nav-link(herf='#') 下載
-                                li.nav-item.active
-                                    a.nav-link(herf='#') Services 
-                                li.nav-item.active
-                                    a.nav-link(herf='#') Contact 
-                        .collapse.navbar-collapse#navbarResponsive
-                            ul.navbar-nav.ml-auto
-                                li.nav-item.active
-                                    a.nav-link(herf='#') 通知總覽
-                                li.nav-item.active
-                                    a.nav-link(herf='#') 幫助中心
-                                li.nav-item.active
-                                    a.nav-link(herf='#') 註冊
-                                li.nav-item.active
-                                    a.nav-link(herf='#') 登入 
+                .header-nav.d-flex.justify-content-between.my-2
+                    .d-flex.justify-content-around
+                        a.border-right.px-1(herf='#') 賣家中心
+                        a.border-right.px-1(herf='#') 下載
+                        a.border-right.px-1(herf='#') Services
+                        a.px-1(herf='#') Contact
+                    .d-flex
+                        a.px-1(herf='#') 通知總覽
+                        a.px-1(herf='#') 幫助中心
+                        a.px-1(herf='#') 註冊
+                        a.px-1(herf='#') 登入
                 .navbar.navbar-expand-lg.pt-0
-                    .container
-                        a.navbar-brand(href="#") 
+                    .container.d-flex.justify-content-between
+                        a.navbar-brand.text-dark(href="#") 
                             h1 Grant Shop
-                        .collapse.navbar-collapse#navbarResponsive
-                            ul.navbar-nav.ml-auto
-                                li.nav-item.active
-                                    a.nav-link(herf='#') Home
-                                        span.sr-only (current)
-                                li.nav-item.active
-                                    a.nav-link(herf='#') About
-                                li.nav-item.active
-                                    a.nav-link(herf='#') Services
-                                li.nav-item.active
-                                    a.nav-link(herf='#') Contact 
+                        .w-100.px-5.py-2
+                            .d-flex.my-lg-0.justify-content-between.bg-white
+                                input.form-control.border-dark.mr-sm-2(type="search" placeholder="Search" aria-label="Search")
+                                button.btn.btn-warning.my-2.my-sm-0(type="submit") Serach
+                            .d-flex.hot-words-list
+                                a.px-1(herf='#') 通知總覽
+                                a.px-1(herf='#') 幫助中心
+                                a.px-1(herf='#') 註冊
+                                a.px-1(herf='#') 登入
+        
         //- ######   #######  ##    ## ######## ######## ##    ## ######## 
         //- ##    ## ##     ## ###   ##    ##    ##       ###   ##    ##    
         //- ##       ##     ## ####  ##    ##    ##       ####  ##    ##    
