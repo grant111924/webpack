@@ -27,9 +27,6 @@ export class Carousel extends React.Component{
                                 data-slide-to={index}></li>);
                         })
                     }
-                    {/* <li className="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> */}
                 </ol>
                 <div className="carousel-inner" role="listbox">
                     {
@@ -38,22 +35,16 @@ export class Carousel extends React.Component{
                             return (
                                 <div className={(index == 0)?"carousel-item active":"carousel-item"}  
                                     key={item.id}>
-                                    <img src={item.src}
-                                        alt={item.text} className="d-block img-fluid"/>
+                                    <img className="d-block img-fluid"
+                                         src={item.src} alt={item.text} />
+                                    <div className="carousel-caption d-none d-md-block">
+                                        <h5>{item.text}</h5>
+                                    </div>
                                 </div>
                             );
                             
                         })
                     }
-                    {/* <div className="carousel-item active">
-                        <img src="http://placehold.it/900x350" alt="First slide" className="d-block img-fluid"/>
-                    </div>
-                    <div className="carousel-item ">
-                        <img src="http://placehold.it/900x350" alt="Second slide" className="d-block img-fluid"/>
-                    </div>
-                    <div className="carousel-item ">
-                        <img src="http://placehold.it/900x350" alt="Third slide" className="d-block img-fluid"/>
-                    </div> */}
                 </div>
                 <a href="#carouselExampleIndicators" className="carousel-control-prev" role="button" data-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
