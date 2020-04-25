@@ -7,50 +7,40 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import 'popper.js';
 import 'bootstrap'
+import {Carousel} from'./carousel.js';
 
 $(()=>{
     console.log("index");
 })
-class App extends React.Component{
+export class Content extends React.Component{
+    state = {
+        carouselList:[
+            {id:'id1', text:'3C產品打五折',src:'http://placehold.it/900x350'},
+            {id:'id2', text:'IPONE SE 開放預購中',src:'http://placehold.it/900x350'},
+            {id:'id3', text:'五一勞動 免運',src:'http://placehold.it/900x350'},
+        ]
+    }
     componentDidMount(){
         console.log('componentDidMount');
-        $(".carousel").carousel({
-            interval: 500
-        });
+        // $(".carousel").carousel({
+        //     interval: 500
+        // });
     }
     componentWillUnmount(){
         console.log('componentWillUnmount');
     }
-    render () {
+    render(){
         return(
-            <div className="carousel slide my-4" id = "carouselExampleIndicators">
-                <ol className="carousel-indicators">
-                    <li className="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div className="carousel-inner" role="listbox">
-                    <div className="carousel-item active">
-                        <img src="http://placehold.it/900x350" alt="First slide" className="d-block img-fluid"/>
-                    </div>
-                    <div className="carousel-item ">
-                        <img src="http://placehold.it/900x350" alt="Second slide" className="d-block img-fluid"/>
-                    </div>
-                    <div className="carousel-item ">
-                        <img src="http://placehold.it/900x350" alt="Third slide" className="d-block img-fluid"/>
-                    </div>
-                </div>
-                <a href="#carouselExampleIndicators" className="carousel-control-prev" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a href="#carouselExampleIndicators" className="carousel-control-next" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
+            <div className="col-lg-12">
+                <Carousel {...this.state}/>
             </div>
         );
-    }
+    } 
 }
+
 ReactDOM.render(
-    <App />,
-    document.getElementById('appContent')
-)
+    <div className="row">
+        <Content />
+    </div>,
+    document.getElementById('app')
+);
