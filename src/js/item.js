@@ -37,7 +37,6 @@ export class Item extends React.Component{
                     <div className="card-footer">
                         <small className="text-muted">
                            {starList.map((value,index) => {
-                               console.log(value,index)
                                return(
                                    <div className={value} key={index}></div>
                                );
